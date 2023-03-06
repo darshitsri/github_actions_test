@@ -1,15 +1,15 @@
 name: 'Demo project@2'
-description: 'Greet someone and record the time'
+description: 'Custome Github Action for demo'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  message:  # id of input
+    description: 'Demo message'
     required: true
     default: 'Action'
 outputs:
   time: # id of output
-    description: 'The time we greeted you'
+    description: 'The time message is displayed'
 runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.who-to-greet }}
+    - ${{ inputs.message }}
